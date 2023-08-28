@@ -1,0 +1,17 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <ul class="list-group">
+                <app-user-list-element *ngFor="let user of users; let i = index"
+                [user]="user"
+                [id]="i"></app-user-list-element>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <button type="button" class="user-add-button" (click)="onAddUser()"><p>+</p></button>
+        </div>
+    </div>
+</div>

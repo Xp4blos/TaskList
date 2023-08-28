@@ -1,0 +1,33 @@
+<div class="container container-md">
+    <h3>Dodaj pracownika</h3>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <div class="form-group">
+            <label>Nr prac.:</label>
+            <input type="text" name="nrPrac" ngModel required>
+        </div>
+        <div class="form-group">
+            <label>Dział:</label>
+            <input type="text" name="dzial" ngModel required>
+        </div>
+        <div class="form-group">
+            <label>Pion:</label>
+            <input type="text" name="pion" ngModel required>
+        </div>
+        <div class="form-group">
+            <label>Imię:</label>
+            <input type="text" name="name" ngModel required>
+        </div>
+        <div class="form-group">
+            <label>Nazwisko:</label>
+            <input type="text" name="lastName" ngModel required>
+        </div>
+        <div class="form-group">
+            <label>Stanowisko</label>
+            <input type="text" name="stanowisko" ngModel required>
+        </div>
+        <div class="buttons">
+            <button class="btn btn-info btn-sm" type="submit" [disabled]="!f.valid" ngModel>OK</button>
+            <button class="btn btn-danger btn-sm" type="button" (click)="onCancel()">Anuluj</button>
+        </div>
+    </form>
+</div>

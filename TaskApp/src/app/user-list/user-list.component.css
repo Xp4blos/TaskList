@@ -1,0 +1,28 @@
+.container{
+    margin: 0;
+}
+.col-12{
+    padding: 0;
+}
+.user-add-button{
+    background-color: red;
+    color: white;
+    border:none;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 10%;
+    right: 10%;
+    transition: .3s;
+}
+.user-add-button p{
+    position: relative;
+    top: -7px;
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: bold;
+}
+.user-add-button:hover{
+    background-color: crimson;
+}

@@ -1,0 +1,27 @@
+button.btn{
+    margin: 5px;
+
+}
+.kat-select,.kat-btn{
+ height: 30px;
+}
+.kat-btn{
+    background-color: orchid;
+    line-height: 20px;
+}
+.kat-select{
+    padding: 4px;
+    margin: 5px;
+}
+.container{
+    margin-top: 50px;
+}
+.points{
+    margin-top: 50px;
+}
+.points ul li{
+    margin: 10px;
+}
+.points ul li label{
+    margin: 5px;
+}

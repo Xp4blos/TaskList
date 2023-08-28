@@ -1,0 +1,4 @@
+
+<app-task-list-item *ngFor="let task of user.tasks; let i = index" [taskId]="i" [task]="task"></app-task-list-item>
+<button type="button" (click)="onNewTask()" class="user-add-button"><p>+</p></button>
+<button type="button" (click)="onBack()" class="back-button"><img src="assets/img/arrow.png" alt=""></button>

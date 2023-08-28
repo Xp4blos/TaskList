@@ -1,0 +1,15 @@
+li{
+    width: 100vw;
+}
+.element__buttons{
+    display: flex;
+    justify-content: flex-end;
+}
+p{
+    font-size: 18px;
+    margin-top: 15px;
+}
+button.btn.btn-info, button.btn.btn-danger{
+    color: white;
+    margin:5px
+}

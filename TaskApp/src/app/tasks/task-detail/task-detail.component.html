@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="point" *ngFor="let point of usersService.users[userId].tasks[taskId].Points; let i = index">
+        <div class="left">
+            <h4>{{setPointIndex(i)}}. {{point.content}}</h4>
+            <p class="proc">{{point.procent}}%</p>
+        </div>
+        <div class="right">
+            <input type="checkbox" [(ngModel)]="point.done" class="cbox" id="btncheck2">
+        </div>
+    </div>
+</div>
+<button type="button" (click)="onBack()" class="back-button"><img src="assets/img/arrow.png" alt=""></button>

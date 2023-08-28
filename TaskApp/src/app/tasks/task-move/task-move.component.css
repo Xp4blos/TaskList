@@ -1,0 +1,26 @@
+.container{
+    margin-top: 25px;
+}
+input{
+    margin: 25px;
+}
+.list-element{
+    display: flex;
+    justify-content: space-between;
+}
+.results{
+    margin-top: 20px;
+}
+.btn{
+    margin: 5px;
+}
+.select-group{
+    display: flex;
+}
+.select-group select{
+    margin: 10px;
+}
+
+.in-row {
+        background: yellow; 
+     }

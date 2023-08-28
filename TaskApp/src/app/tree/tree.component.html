@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 prezes">
+            <h3>P</h3>
+    <p>PUM</p>
+    <ul>
+        <li *ngFor="let user of usersService.getUsersByDzial('PUM')">{{user}}</li>
+    </ul>
+    <p>PUZ</p>
+    <ul>
+        <li *ngFor="let user of usersService.getUsersByDzial('PUZ')">{{user}}</li>
+    </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <h3>DT</h3>
+            <p>TCS</p>
+            <ul>
+                <li *ngFor="let user of usersService.getUsersByDzial('TCS')">{{user}}</li>
+            </ul>
+            <p>TWT</p>
+            <ul>
+                <li *ngFor="let user of usersService.getUsersByDzial('TWT')">{{user}}</li>
+            </ul>
+        </div>
+        <div class="col-6">
+            <h3>DR</h3>
+            <p>RIW</p>
+            <ul>
+                <li *ngFor="let user of usersService.getUsersByDzial('RIW')">{{user}}</li>
+            </ul>
+            <p>RIT</p>
+            <ul>
+                <li *ngFor="let user of usersService.getUsersByDzial('RIT')">{{user}}</li>
+            </ul>
+        </div>
+    </div>
+</div>

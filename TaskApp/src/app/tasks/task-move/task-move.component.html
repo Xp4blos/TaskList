@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label>Wyszukaj pracownika:</label>
+                <input type="text" [(ngModel)]="filterKey">
+                <!-- <button type="button" class="btn btn-info btn-sm">Szukaj</button> -->
+            </div>
+            <div class="form-group results">
+                <p>Wyniki wyszukiwania:</p>
+                <ul class="list-group">
+                    <li class="list-group-item list-element" *ngFor="let user of usersService.filtrowanie(filterKey) ;let i = index" [ngStyle]="{'background-color': selectedItem == i ? 'yellow':'white'}" class="element{{i}}"><p>{{user.name}} {{user.lastName}}</p> <button (click)="onChose(user, i )" class="btn btn-info" type="button">Wybierz</button></li>
+                </ul>
+                <p>Wybrano pracownika <b>{{chosenName}}</b></p>
+                <div class="select-group">
+                    <p>Nowy status zadania</p>
+                    <select name="" id="">
+                        <option *ngFor="let kategoria of kategorie" value="kategoria">{{kategoria}}</option>
+                    </select>
+                </div>
+            
+                <div class="buttons">
+                    <button (click)="onApply()" class="btn btn-success btn-sm" type="submit">Zatwierdź przeniesienie</button>
+                    <button (click)="onCancel()" class="btn btn-danger btn-sm" type="button">Anuluj</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

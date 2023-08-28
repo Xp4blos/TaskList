@@ -1,0 +1,13 @@
+.container{
+    margin-top: 15px;
+}
+label{
+    width: 40%;
+}
+.form-group{
+    margin:5px
+}
+.btn{
+    margin: 15px 15px 5px 0px;
+    width: 75px;
+}

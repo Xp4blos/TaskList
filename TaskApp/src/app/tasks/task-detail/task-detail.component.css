@@ -1,0 +1,48 @@
+.container{
+    margin-top: 100px;
+}
+.point{
+    margin: 0 auto;
+    width: 430px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+.left{
+    display: flex;
+    width: 90%;
+}
+.right{
+    width: 10%;
+}
+.proc{
+    font-style: italic;
+    margin: 5px;
+    line-height: 35px;
+}
+h4{
+    margin: 5px;
+    line-height: 35px;
+}
+.cbox{
+    height: 20px;
+    width: 20px;
+    margin: 5px;
+
+}
+
+.back-button{
+    background-color: deepskyblue;
+    color: black;
+    border:none;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 10%;
+    left: 10%;
+    transition: .3s;
+}
+.back-button img{
+    width: 30px;
+}

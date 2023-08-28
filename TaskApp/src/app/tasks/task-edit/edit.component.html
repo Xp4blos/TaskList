@@ -1,0 +1,40 @@
+<app-new-kat *ngIf="isNewKat" (close)="closeEmit($event)"></app-new-kat>
+<div class="container">
+<div class="wrapper">
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <div class="form-group">
+        <h3>Kategoria zadania</h3>
+        <select class="kat-select" name="kategoria" id="" [(ngModel)]="task.kategoria">
+            <option  *ngFor="let kategoria of kategorie" value="{{kategoria}}">{{kategoria}}</option>
+        </select>
+        <button class="btn btn-sm kat-btn" type="button" (click)="onNewKat()">Nowa kategoria</button>
+    </div>
+   
+    <div class="form-group">
+        <h3>Treść zadania:</h3>
+        <textarea class="form-control" name="content"  cols="30" rows="10" ngModel="{{task.content}}"></textarea>
+    </div>
+    <div class="points" *ngIf="usersService.users[id].tasks[taskId].Points">
+        <ul>
+            <li *ngFor="let point of usersService.users[id].tasks[taskId].Points; let i = index">
+                <label>Treść</label>
+                <input type="text" name="" [(ngModel)]="point.content" [ngModelOptions]="{standalone:true}" id="">
+                <label>Procent:</label>
+                <input type="text" name="" [(ngModel)]="point.procent" [ngModelOptions]="{standalone:true}" id="">
+                <button type="button" (click)="onPointDelete(i)" class="btn btn-danger">X</button>
+            </li>
+            <li>
+                <label>Treść</label>
+                <input type="text" name="" [(ngModel)]="newPointContent" [ngModelOptions]="{standalone:true}" id="">
+                <label>Procent:</label>
+                <input type="text" name="" [(ngModel)]="newPointPer" [ngModelOptions]="{standalone:true}" id="">
+                <button type="button" (click)="onPointAdd()" class="btn btn-info">Add</button>
+            </li>
+        </ul>
+    </div>
+   <div class="group">
+    <button class="btn btn-info btn-sm" type="submit" ngModel>OK</button>    <button (click)="onCancel()" class="btn btn-danger btn-sm">Anulij</button>
+</div>
+</form>
+</div>
+</div>

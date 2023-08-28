@@ -1,0 +1,11 @@
+<div class="backdrop" (click)="onClose()"></div>
+<div class="alert-box">
+    <div class="form-group">
+        <p>Nazwa kategori:</p>
+        <input class="form-control" (input)="onKatInput($event)" type="text"  id="">
+    </div>
+    <div class="alert-box-action">
+        <button class="btn btn-primary btn-sm" [disabled]="!katName" (click)="onAdd()">Dodaj</button>
+        <button class="btn btn-danger btn-sm" (click)="onClose()">Anuluj</button>
+    </div>
+</div>  

@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div *ngFor="let kategoria of kategories.kategorie">
+                <h3>{{kategoria}}</h3>
+                <ul>
+                    <li *ngFor="let task of usersService.getTasksByKat(id,kategoria)">{{task.content}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

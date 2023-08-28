@@ -1,0 +1,27 @@
+<li class="list-group-item wrapper">
+    <div class="left">
+        <h3>Treść zadania</h3>
+        <p class="task-content">{{task.content}}{{'  '}}{{zliczajProcentTxt()}}</p>
+        <div class="form-group">
+             <label>Status:  </label>
+            <select class="input" name="status" [(ngModel)]="task.status">
+                <option value="0">Nie rozpoczęte</option>
+                <option value="1">W realizacji</option>
+                <option value="2">Zakończone</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Zaawansowanie:</label>
+            <input class="input" [(ngModel)]="task.zaawansowanie" type="range" min="0" max="100">
+            <span>[<span>{{task.zaawansowanie}}</span>]</span>
+        </div>
+
+    </div>
+    <div class="right">
+        <button (click)="onEdit()" class="btn btn-info">Edytuj</button>
+        <button (click)="onMove()" class="btn btn-secondary">Przenieś</button>
+        <button (click)="onDelete()" class="btn btn-danger">Usuń</button>
+        <button *ngIf="anyPoints()" (click)="onSelect()" class="btn btn-warning">Przeglądaj</button>
+    </div>
+ 
+</li>

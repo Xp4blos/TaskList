@@ -1,0 +1,15 @@
+
+
+.header__nav{
+    background-color:deepskyblue!important;
+    
+}
+.header__nav span{
+    color: white !important;
+}
+.header__nav__button{
+    background-color: gray;
+}
+.header__nav__button-img{
+    height: 35px;
+}

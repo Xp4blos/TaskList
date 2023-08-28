@@ -1,0 +1,11 @@
+<li class="list-group-item" [routerLink]="[id]"
+    routerLinkActive="list">
+       <h3>{{user.name}} {{user.lastName}}
+        <span class="element__taski">[{{tasksFinished}}/{{tasksAmount}}]</span>
+    </h3>
+    <p>Stanowisko: {{user.stanowisko}}</p>
+    <div class="element__buttons">
+        <button class="btn btn-info" (click)="onEdit()">Edytuj</button>
+        <button class="btn btn-danger"(click)="onDelete()">Usuń</button>
+    </div>
+</li>
