@@ -101,5 +101,6 @@ ngOnInit(): void {
 
     }
   })
+  this.procenty = this.zliczajProcentValue()
 }
 }
